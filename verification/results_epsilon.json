@@ -1,0 +1,196 @@
+{
+  "status": "passed",
+  "scope": "Floating-point finite-size verification; no arbitrary-N or noise-threshold inference.",
+  "created_utc": "2026-11-04T04:53:13.273560+00:00",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "script_sha256": "94cbe41b4cd18511444b6a81d6edbb62d1680db92abbb7967180386e100c3282",
+  "parameters": {
+    "nmax": 4,
+    "alpha": null,
+    "epsilon": 0.125,
+    "eta": 4.0,
+    "gamma": "4*alpha/sqrt(N)"
+  },
+  "tolerances": {
+    "algebra_absolute": 1e-10,
+    "evolution_and_numerical_nullity": 1e-08
+  },
+  "check_count": 58,
+  "failures": [],
+  "elapsed_seconds": 0.40450269900247804,
+  "sizes": [
+    {
+      "n": 4,
+      "alpha": 0.5345224838248488,
+      "epsilon": 0.125,
+      "eta": 4.0,
+      "gamma": 1.0690449676496976,
+      "normalization": 2.2857142857142856,
+      "ghz_fidelity": 0.875,
+      "residuals": {
+        "hamiltonian_hermiticity": 0.0,
+        "dark_hamiltonian": 0.0,
+        "dark_jumps": 0.0,
+        "stationary_generator": 7.850462293418876e-17,
+        "clock_hamiltonian_intertwining": 0.0,
+        "clock_cleanup_annihilation": 0.0,
+        "clock_pump_intertwining": 0.0
+      },
+      "drift_max_eigenvalues": {
+        "hamiltonian_minus_2Q": 0.0,
+        "cleanup_plus_etaQ": 0.0,
+        "pump": 0.0,
+        "total_plus_2Q": 0.0,
+        "total_plus_2W_over_N_minus_1": 0.0
+      },
+      "smin_squared": 0.28571428571428564,
+      "smin_squared_lower_bound": 0.07142857142857144,
+      "pinned_laplacian_residual": 0.0,
+      "lyapunov_residual": 1.5700924586837752e-16,
+      "interval_tau": 14.966629547095765,
+      "bright_no_jump_survival_operator_norm_squared": 0.000662815302729057,
+      "path_contraction_residual_max_eigenvalue": -7.387828456755946e-17,
+      "path_spectrum": {
+        "zero_eigenvalue_count": 1,
+        "observed_spectral_gap": 0.13245576721138586,
+        "largest_eigenvalue_real_part": -2.4838625033714595e-16
+      },
+      "path_trajectories": {
+        "times": [
+          0.0,
+          7.549690142250298,
+          15.099380284500596,
+          30.19876056900119,
+          60.39752113800238
+        ],
+        "time_unit": "Hamiltonian bulk hopping = 1",
+        "max_trace_error": 3.108624468950438e-14,
+        "max_hermiticity_error": 4.542193801374866e-16,
+        "minimum_density_eigenvalue": -2.0278595829858588e-16,
+        "inputs": {
+          "maximally_mixed": {
+            "half_trace_distance": [
+              0.7999999999999999,
+              0.34616861499276014,
+              0.11963738398737897,
+              0.016397250689901704,
+              0.00030049929789936064
+            ],
+            "dark_population": [
+              0.20000000000000004,
+              0.6934423237714562,
+              0.8870673670803917,
+              0.9847160177840553,
+              0.9997200640867241
+            ]
+          },
+          "coherent_phase_state": {
+            "half_trace_distance": [
+              0.6929892680713671,
+              0.21645143661055619,
+              0.06904491459597953,
+              0.009312415148340828,
+              0.0001693635816280436
+            ],
+            "dark_population": [
+              0.5197658743379112,
+              0.8279347323340578,
+              0.9363735290015287,
+              0.9913869318515449,
+              0.9998422462517405
+            ]
+          },
+          "odd_clock_basis": {
+            "half_trace_distance": [
+              1.0,
+              0.3949832281947524,
+              0.1420564534017558,
+              0.019334357312030925,
+              0.00035412893283422707
+            ],
+            "dark_population": [
+              0.0,
+              0.6409037009994694,
+              0.8668908040890418,
+              0.981988046916873,
+              0.9996700991987608
+            ]
+          }
+        }
+      },
+      "full_spectrum": {
+        "zero_eigenvalue_count": 1,
+        "observed_spectral_gap": 0.1324557672113871,
+        "largest_eigenvalue_real_part": 4.546776162581177e-15,
+        "singular_nullity": 1,
+        "smallest_singular_value": 4.3182172346276856e-16,
+        "second_smallest_singular_value": 0.17726999708315846
+      },
+      "full_trajectories": {
+        "times": [
+          0.0,
+          7.549690142250227,
+          15.099380284500453,
+          30.198760569000907,
+          60.397521138001814
+        ],
+        "time_unit": "Hamiltonian bulk hopping = 1",
+        "max_trace_error": 1.7763573033091647e-14,
+        "max_hermiticity_error": 2.4924843510323196e-16,
+        "minimum_density_eigenvalue": -2.913487144733766e-16,
+        "inputs": {
+          "maximally_mixed": {
+            "half_trace_distance": [
+              0.9375,
+              0.3100867913576799,
+              0.11314843494844869,
+              0.01527170316337672,
+              0.00027910406554193393
+            ],
+            "dark_population": [
+              0.06250000000000001,
+              0.7157445698132696,
+              0.8951001042105811,
+              0.9858042116362815,
+              0.999739994958118
+            ]
+          },
+          "coherent_phase_state": {
+            "half_trace_distance": [
+              0.976912374517882,
+              0.2978356617554708,
+              0.11041609726606258,
+              0.014846926876631455,
+              0.0002714365819282105
+            ],
+            "dark_population": [
+              0.045642212513833935,
+              0.7229733454351643,
+              0.8979789913980509,
+              0.986193984466732,
+              0.9997471339002926
+            ]
+          },
+          "alternating_basis": {
+            "half_trace_distance": [
+              1.0,
+              0.2562351211270604,
+              0.09676852248289856,
+              0.012747781323269314,
+              0.0002320451991851044
+            ],
+            "dark_population": [
+              0.0,
+              0.7635635077053232,
+              0.9127788853664095,
+              0.9881977826522108,
+              0.9997838346965029
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
