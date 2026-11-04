@@ -12,6 +12,14 @@ This repository gives an explicit time-independent nearest-neighbor two-body Lin
 - Prior work and inherited ingredients: references/related-work.md and references/references.bib
 - Executable finite-size checks, dependencies and expected results: verification/README.md
 
+## Study route
+
+- Orientation, prerequisites and the route through the construction: learning/README.md
+- Connections between the selected source and the project's definitions and proofs: learning/RIVAS_HUELGA_BRIDGE.md
+- Exactly 30 shared milestones, with questions, understanding targets and dependencies: learning/MILESTONES.md
+
+The single educational anchor is Ángel Rivas and Susana F. Huelga, Open Quantum Systems: An Introduction (2012), in the fixed arXiv:1104.5242v2 edition, https://arxiv.org/abs/1104.5242v2. The bridge supplies source locations and distinguishes general open-system tools from the construction-specific arguments. The scientific pages remain authoritative for the generator, theorem, constants and resource assumptions.
+
 ## Scientific distinctions
 
 The system is the N physical data qubits, with no retained auxiliary controller; engineered Markovian reservoirs are assumed. Every Hamiltonian term and jump has one-site or nearest-neighbor two-site support. The main theorem is for even N at least four. Epsilon specifies stationary GHZ infidelity; delta specifies half trace distance to the actual stationary state. Bounded local strengths allow an extensive total budget. Finite-size calculations support the algebra, while the analytical proof establishes arbitrary-size convergence. The preparation guarantee does not assert optimal time, a fixed-noise threshold or a microscopic hardware realization.
