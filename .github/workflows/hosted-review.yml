@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
-      GHZ_SOURCE_REV: e7123777d6ab12be96afd0fff30fcefe5a132f97
+      GHZ_SOURCE_REV: 4762aa0f52f4831d8ffe5dc4be2340b09eaf4616
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
