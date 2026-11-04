@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
-      GHZ_SOURCE_REV: 8b5e510bd5d843015042ca2ae1c38bb2eccec037
+      GHZ_SOURCE_REV: e7123777d6ab12be96afd0fff30fcefe5a132f97
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -30,7 +30,7 @@ jobs:
           "$RUNNER_TEMP/ghz-render-deps/node_modules/.bin/playwright" install --with-deps chromium
       - name: Compare the pinned hosted pages with their source
         run: |
-          NODE_PATH="$RUNNER_TEMP/ghz-render-deps/node_modules" node collector/verification/hosted/capture_hosted_math.cjs --root source --repository GoGoKo699/Local-GHZ-Stabilization --revision "$GHZ_SOURCE_REV" --output "$RUNNER_TEMP/ghz-hosted" --page README.md --page science/model.md --page verification/README.md
+          NODE_PATH="$RUNNER_TEMP/ghz-render-deps/node_modules" node collector/verification/hosted/capture_hosted_math.cjs --root source --repository GoGoKo699/Local-GHZ-Stabilization --revision "$GHZ_SOURCE_REV" --output "$RUNNER_TEMP/ghz-hosted" --contract collector/verification/hosted/math-contract.json
       - name: Retain the capture and exact comparison
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

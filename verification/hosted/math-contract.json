@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 6,
+      "source_sha256": "d800ce10f7423f0ce431cf9d6db9047a33aabbdea9a4e4d65dc2681c054de0cd",
+      "required_text": [
+        "tmix(δ)=O(",
+        "N2ε−3/2",
+        "0<δ<1"
+      ]
+    },
+    {
+      "path": "science/model.md",
+      "index": 8,
+      "source_sha256": "47f8eebdd62ccdb1ae7ac6db8d9979b15aceac4446295523c2c24330f4a92b01",
+      "required_text": [
+        "D[L](ρ)",
+        "{",
+        "}",
+        "L†L"
+      ]
+    },
+    {
+      "path": "verification/README.md",
+      "index": 7,
+      "source_sha256": "031f1b8adb0907007ff1985098af73a9ccdb305ce701b16e46f98de03a222b65",
+      "required_text": [
+        "diag",
+        "(1,−1)"
+      ]
+    },
+    {
+      "path": "learning/RIVAS_HUELGA_BRIDGE.md",
+      "index": 80,
+      "source_sha256": "9a0816f87b599f3b25cca2a2d4ca7931678efcd19005a47ec31872d3b5a2ba1f",
+      "required_text": [
+        "T4(δ)",
+        "24",
+        "36",
+        "0<δ<1"
+      ]
+    }
+  ]
+}
