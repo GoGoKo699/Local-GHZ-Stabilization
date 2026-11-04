@@ -202,8 +202,8 @@ For example, the cleanup jumps allow the transitions
 
 ```math
 |0011\rangle
-\xrightarrow{C_2}|0001\rangle
-\xrightarrow{C_3}|0000\rangle.
+\overset{C_2}{\rightarrow}|0001\rangle
+\overset{C_3}{\rightarrow}|0000\rangle.
 ```
 
 Their wall weights decrease from two to one to zero. This example describes individual jump actions. The rigorous [operator inequality](../science/cleanup.md#uniform-decay-outside-the-monotone-sector) includes the concurrent Hamiltonian evolution and every possible initial coherence:
