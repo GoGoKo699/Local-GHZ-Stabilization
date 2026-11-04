@@ -2,7 +2,7 @@
 
 An open chain of qubits can carry both a target GHZ superposition and the intermediate configurations needed to prepare it. The construction studied here uses a coherent path through monotone domain-wall states, with weak endpoint couplings and loss on alternating intermediate states. Two-qubit cleanup jumps remove configurations outside this path. Every control term is time independent and acts on at most two neighboring qubits.
 
-For every even chain length $N\geq4$, the generator has a unique pure stationary state with a specified GHZ infidelity $\epsilon$. A direct convergence proof gives a worst-input time polynomial in $N$ and $1/\epsilon$. This conclusion includes arbitrary initial quantum coherences and uses no retained auxiliary system, feedback or postselection. Engineered Markovian reservoirs remain part of the physical model.
+For every even chain length $`N\geq4`$, the generator has a unique pure stationary state with a specified GHZ infidelity $`\epsilon`$. A direct convergence proof gives a worst-input time polynomial in $`N`$ and $`1/\epsilon`$. This conclusion includes arbitrary initial quantum coherences and uses no retained auxiliary system, feedback or postselection. Engineered Markovian reservoirs remain part of the physical model.
 
 ## Reading route
 
