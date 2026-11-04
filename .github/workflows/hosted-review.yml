@@ -1,0 +1,42 @@
+name: Hosted mathematics review
+on:
+  push:
+    branches: [merlin/hosted-review]
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GHZ_SOURCE_REV: 8b5e510bd5d843015042ca2ae1c38bb2eccec037
+      NODE_PATH: ${{ runner.temp }}/ghz-render-deps/node_modules
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          path: collector
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ env.GHZ_SOURCE_REV }}
+          path: source
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '20'
+      - name: Install isolated rendering dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/ghz-render-deps" --no-audit --no-fund playwright@1.56.1 mathjax-full@3.2.1
+          "$RUNNER_TEMP/ghz-render-deps/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Compare the pinned hosted pages with their source
+        run: |
+          node collector/verification/hosted/capture_hosted_math.cjs --root source --repository GoGoKo699/Local-GHZ-Stabilization --revision "$GHZ_SOURCE_REV" --output "$RUNNER_TEMP/ghz-hosted" --page README.md --page science/model.md --page verification/README.md
+      - name: Retain the capture and exact comparison
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ghz-hosted-${{ github.run_id }}
+          path: ${{ runner.temp }}/ghz-hosted
+          if-no-files-found: warn
+          retention-days: 7
