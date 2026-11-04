@@ -1,0 +1,328 @@
+{
+  "status": "passed",
+  "scope": "Floating-point finite-size verification; no arbitrary-N or noise-threshold inference.",
+  "created_utc": "2026-11-04T04:51:19.937668+00:00",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "script_sha256": "94cbe41b4cd18511444b6a81d6edbb62d1680db92abbb7967180386e100c3282",
+  "parameters": {
+    "nmax": 8,
+    "alpha": 0.2,
+    "epsilon": null,
+    "eta": 4.0,
+    "gamma": "4*alpha/sqrt(N)"
+  },
+  "tolerances": {
+    "algebra_absolute": 1e-10,
+    "evolution_and_numerical_nullity": 1e-08
+  },
+  "check_count": 134,
+  "failures": [],
+  "elapsed_seconds": 1.2109669799974654,
+  "sizes": [
+    {
+      "n": 4,
+      "alpha": 0.2,
+      "epsilon": 0.019607843137254943,
+      "eta": 4.0,
+      "gamma": 0.4,
+      "normalization": 2.04,
+      "ghz_fidelity": 0.9803921568627451,
+      "residuals": {
+        "hamiltonian_hermiticity": 0.0,
+        "dark_hamiltonian": 0.0,
+        "dark_jumps": 0.0,
+        "stationary_generator": 0.0,
+        "clock_hamiltonian_intertwining": 0.0,
+        "clock_cleanup_annihilation": 0.0,
+        "clock_pump_intertwining": 0.0
+      },
+      "drift_max_eigenvalues": {
+        "hamiltonian_minus_2Q": 0.0,
+        "cleanup_plus_etaQ": 0.0,
+        "pump": 0.0,
+        "total_plus_2Q": 0.0,
+        "total_plus_2W_over_N_minus_1": 0.0
+      },
+      "smin_squared": 0.040000000000000015,
+      "smin_squared_lower_bound": 0.010000000000000002,
+      "pinned_laplacian_residual": 0.0,
+      "lyapunov_residual": 0.0,
+      "interval_tau": 40.0,
+      "bright_no_jump_survival_operator_norm_squared": 0.0006628153027290543,
+      "path_contraction_residual_max_eigenvalue": 4.1126585735873836e-16,
+      "path_spectrum": {
+        "zero_eigenvalue_count": 1,
+        "observed_spectral_gap": 0.04523630115692037,
+        "largest_eigenvalue_real_part": 1.4592128890657846e-16
+      },
+      "path_trajectories": {
+        "times": [
+          0.0,
+          22.106139857259688,
+          44.212279714519376,
+          88.42455942903875,
+          176.8491188580775
+        ],
+        "time_unit": "Hamiltonian bulk hopping = 1",
+        "max_trace_error": 3.8191672047105385e-14,
+        "max_hermiticity_error": 2.3676948339110634e-15,
+        "minimum_density_eigenvalue": -2.0278595829858588e-16,
+        "inputs": {
+          "maximally_mixed": {
+            "half_trace_distance": [
+              0.8,
+              0.3420267900767986,
+              0.12071645878485611,
+              0.01641192384776567,
+              0.0003003033328579179
+            ],
+            "dark_population": [
+              0.20000000000000004,
+              0.6953436609236852,
+              0.8878586973549968,
+              0.9848234996560135,
+              0.9997220326988304
+            ]
+          },
+          "coherent_phase_state": {
+            "half_trace_distance": [
+              0.7526777225652771,
+              0.23283056259409807,
+              0.08318695654380989,
+              0.010970208413500257,
+              0.000200164578900041
+            ],
+            "dark_population": [
+              0.43347624595394796,
+              0.7973840282607252,
+              0.9252524327316323,
+              0.9898839726381462,
+              0.9998147184764851
+            ]
+          },
+          "odd_clock_basis": {
+            "half_trace_distance": [
+              1.0000000000000004,
+              0.4108525416733705,
+              0.1464634050699572,
+              0.019889713195533825,
+              0.00036400361561062953
+            ],
+            "dark_population": [
+              0.0,
+              0.6313186911843317,
+              0.8640665637158598,
+              0.9816042792624275,
+              0.9996630706318692
+            ]
+          }
+        }
+      },
+      "full_spectrum": {
+        "zero_eigenvalue_count": 1,
+        "observed_spectral_gap": 0.045236301156920275,
+        "largest_eigenvalue_real_part": 1.220681975071953e-15,
+        "singular_nullity": 1,
+        "smallest_singular_value": 2.7383530608432554e-16,
+        "second_smallest_singular_value": 0.06093042113431469
+      },
+      "full_trajectories": {
+        "times": [
+          0.0,
+          22.106139857259738,
+          44.212279714519475,
+          88.42455942903895,
+          176.8491188580779
+        ],
+        "time_unit": "Hamiltonian bulk hopping = 1",
+        "max_trace_error": 1.9984014443252818e-14,
+        "max_hermiticity_error": 7.985797360791136e-16,
+        "minimum_density_eigenvalue": -2.913487144733766e-16,
+        "inputs": {
+          "maximally_mixed": {
+            "half_trace_distance": [
+              0.9375,
+              0.29910245111181655,
+              0.11165324980714361,
+              0.014959685269782403,
+              0.0002737101340606384
+            ],
+            "dark_population": [
+              0.0625,
+              0.7223288427939722,
+              0.8977868325433628,
+              0.9861673853958532,
+              0.9997466468252836
+            ]
+          },
+          "coherent_phase_state": {
+            "half_trace_distance": [
+              0.9858420749303298,
+              0.29728963109882767,
+              0.11154622023772096,
+              0.014958906605807806,
+              0.00027381671472710483
+            ],
+            "dark_population": [
+              0.028115403297063253,
+              0.7220734884407487,
+              0.8977491548383443,
+              0.9861620427474638,
+              0.9997465489777051
+            ]
+          },
+          "alternating_basis": {
+            "half_trace_distance": [
+              1.0,
+              0.21914880511226925,
+              0.08747031054680782,
+              0.011385698041174563,
+              0.00020826625720889833
+            ],
+            "dark_population": [
+              0.0,
+              0.7884690406390678,
+              0.9222234016002955,
+              0.9894746603900417,
+              0.9998072216808134
+            ]
+          }
+        }
+      }
+    },
+    {
+      "n": 6,
+      "alpha": 0.2,
+      "epsilon": 0.03846153846153877,
+      "eta": 4.0,
+      "gamma": 0.32659863237109044,
+      "normalization": 2.08,
+      "ghz_fidelity": 0.9615384615384612,
+      "residuals": {
+        "hamiltonian_hermiticity": 0.0,
+        "dark_hamiltonian": 0.0,
+        "dark_jumps": 0.0,
+        "stationary_generator": 3.925231146709438e-17,
+        "clock_hamiltonian_intertwining": 0.0,
+        "clock_cleanup_annihilation": 0.0,
+        "clock_pump_intertwining": 0.0
+      },
+      "drift_max_eigenvalues": {
+        "hamiltonian_minus_2Q": 0.0,
+        "cleanup_plus_etaQ": 0.0,
+        "pump": 0.0,
+        "total_plus_2Q": 0.0,
+        "total_plus_2W_over_N_minus_1": 0.0
+      },
+      "smin_squared": 0.02654762379244248,
+      "smin_squared_lower_bound": 0.006666666666666668,
+      "pinned_laplacian_residual": 0.0,
+      "lyapunov_residual": 1.2560739669470201e-15,
+      "interval_tau": 48.989794855663554,
+      "bright_no_jump_survival_operator_norm_squared": 0.0006521291805650347,
+      "path_contraction_residual_max_eigenvalue": 1.9984044057388943e-15,
+      "path_spectrum": {
+        "zero_eigenvalue_count": 1,
+        "observed_spectral_gap": 0.025954323241593767,
+        "largest_eigenvalue_real_part": -1.1220159728587163e-16
+      },
+      "path_trajectories": {
+        "times": [
+          0.0,
+          38.52922654509536,
+          77.05845309019072,
+          154.11690618038145,
+          308.2338123607629
+        ],
+        "time_unit": "Hamiltonian bulk hopping = 1",
+        "max_trace_error": 2.5757174171303632e-14,
+        "max_hermiticity_error": 5.783742562950045e-16,
+        "minimum_density_eigenvalue": -1.3745040946559335e-16,
+        "inputs": {
+          "maximally_mixed": {
+            "half_trace_distance": [
+              0.857142857142857,
+              0.3317764239255028,
+              0.12269686072925386,
+              0.016601840908427173,
+              0.00030406924375431374
+            ],
+            "dark_population": [
+              0.14285714285714285,
+              0.6796297414191625,
+              0.8821468692226527,
+              0.9840503157486671,
+              0.9997078713428543
+            ]
+          },
+          "coherent_phase_state": {
+            "half_trace_distance": [
+              0.9659121380068347,
+              0.36096904320954515,
+              0.13371937475901846,
+              0.018101227757651665,
+              0.0003315300402471495
+            ],
+            "dark_population": [
+              0.0670137416510655,
+              0.6505891440171857,
+              0.8715033778419305,
+              0.9826098838513021,
+              0.9996814889123632
+            ]
+          },
+          "odd_clock_basis": {
+            "half_trace_distance": [
+              1.0,
+              0.3679523307944959,
+              0.13614287002615674,
+              0.018424568275455838,
+              0.00033745340900556855
+            ],
+            "dark_population": [
+              0.0,
+              0.6445052893310597,
+              0.8692070852699736,
+              0.9822991787707608,
+              0.9996757981504201
+            ]
+          }
+        }
+      }
+    },
+    {
+      "n": 8,
+      "alpha": 0.2,
+      "epsilon": 0.05660377358490576,
+      "eta": 4.0,
+      "gamma": 0.282842712474619,
+      "normalization": 2.12,
+      "ghz_fidelity": 0.9433962264150942,
+      "residuals": {
+        "hamiltonian_hermiticity": 0.0,
+        "dark_hamiltonian": 0.0,
+        "dark_jumps": 0.0,
+        "stationary_generator": 3.925231146709438e-17,
+        "clock_hamiltonian_intertwining": 0.0,
+        "clock_cleanup_annihilation": 0.0,
+        "clock_pump_intertwining": 0.0
+      },
+      "drift_max_eigenvalues": {
+        "hamiltonian_minus_2Q": 0.0,
+        "cleanup_plus_etaQ": 0.0,
+        "pump": 0.0,
+        "total_plus_2Q": 0.0,
+        "total_plus_2W_over_N_minus_1": 0.0
+      },
+      "smin_squared": 0.019800019996001034,
+      "smin_squared_lower_bound": 0.005000000000000001,
+      "pinned_laplacian_residual": 0.0,
+      "lyapunov_residual": 2.5121479338940403e-15,
+      "interval_tau": 56.568542494923804,
+      "bright_no_jump_survival_operator_norm_squared": 0.0006387052925190878,
+      "path_contraction_residual_max_eigenvalue": 3.108624520848421e-15
+    }
+  ]
+}

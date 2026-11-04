@@ -1,0 +1,17 @@
+# Local GHZ Stabilization
+
+This repository gives an explicit time-independent nearest-neighbor two-body Lindblad construction for pure approximate GHZ stabilization on even qubit chains, with polynomial worst-input convergence.
+
+## Reading routes
+
+- Scientific overview: science/README.md
+- Exact controls, target state and fidelity: science/model.md
+- Full-space attraction, including coherences: science/cleanup.md
+- Quantitative path convergence and complete mixing theorem: science/convergence.md
+- Accuracy conversion, strength budgets and perturbation guarantees: science/resources.md
+- Prior work and inherited ingredients: references/related-work.md and references/references.bib
+- Executable finite-size checks, dependencies and expected results: verification/README.md
+
+## Scientific distinctions
+
+The system is the N physical data qubits, with no retained auxiliary controller; engineered Markovian reservoirs are assumed. Every Hamiltonian term and jump has one-site or nearest-neighbor two-site support. The main theorem is for even N at least four. Epsilon specifies stationary GHZ infidelity; delta specifies half trace distance to the actual stationary state. Bounded local strengths allow an extensive total budget. Finite-size calculations support the algebra, while the analytical proof establishes arbitrary-size convergence. The preparation guarantee does not assert optimal time, a fixed-noise threshold or a microscopic hardware realization.
